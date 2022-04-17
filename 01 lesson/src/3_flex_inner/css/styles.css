@@ -1,0 +1,45 @@
+html,body{
+	margin: 0;
+}
+
+.wraper {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.profit {
+	background: #232324;
+	padding: 15px 0;
+}
+
+.profit .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.profit .itemPair{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* flex-basis: 2 * (250px + 30px); 
+	flex-basis: 500px; */
+}
+
+.profit .item {
+	text-align: center;
+	margin: 15px;
+	width: 250px;
+	/* или flex-basis */
+}
+
+.profit .item .subtitle {
+	color: #fff;
+	font-size: 1.5rem;
+	margin: 3px 0;
+}
+
+.profit .item .text {
+	color: #d94948;
+}
