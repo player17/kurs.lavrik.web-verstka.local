@@ -1,0 +1,8 @@
+Кто чувствует, что не смог сразу запомнить все flexbox свойства, рекомендую пройти две тренировки:
+
+http://flexboxfroggy.com/
+http://www.flexboxdefense.com/
+https://dmitrylavrik.ru/flexbox-generator
+
+
+
