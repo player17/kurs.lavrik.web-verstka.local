@@ -104,7 +104,7 @@ section.profit .item .text {
 	min-width: 100px;
 }
 .text {
-	flex-basis: calc(75% - 10px);*/
+	flex-basis: calc(75% - 10px);
 	/*flex-basis: 300px;*/
 	min-width: 290px;
 	flex-grow: 1;

@@ -1,0 +1,75 @@
+html, body{
+    margin: 0;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    margin: 15px;
+    width: calc(100% / 12 * 3 - 30px);
+    box-sizing: border-box;
+}
+
+.humans{
+    background: #232323;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.humans .row{
+    justify-content: center;
+}
+
+.humans .col{
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.humans .col img{
+    margin: 10px 0;
+    max-width: 90%;
+    align-self: center;
+}
+
+.humans .col .subtitle{
+    color: #6cc372;
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
+
+.humans .col .job{
+    margin: auto 10px 10px;
+}
+
+.humans .col .follow{
+    background: #6cc372;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 860px){
+    .col{
+        width: calc(100% / 12 * 6 - 30px);
+    }
+}
+
+@media screen and (max-width: 560px){
+    .col{
+        width: calc(100% / 12 * 12 - 30px);
+    }
+}
