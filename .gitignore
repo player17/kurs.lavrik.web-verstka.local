@@ -1,8 +1,8 @@
 # IntellijIdea files
-*.iml
 .idea
 out
-*.csv
-*.html
-*.yml
-*.xml
+node_modules
+vendor
+build
+
+
