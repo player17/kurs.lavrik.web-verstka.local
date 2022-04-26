@@ -44,10 +44,16 @@
 > `package-lock.json` содержит список всех зависимостей пакетов (не обязателен, но желателен, для послной совместимости всех пакетов между собой)
 > `gulpfile.js` файл конфигурации в корень проекта 
 > (запускается командой `gulp` в cmd)
-> > `gulp build` пример простой команды, 
+> > `gulp build` пример простой команды, запуска проекта ч/з `gulp.task('build', ...)`
 > > сконфигрурированной в `gulpfile.js`
 
 > `gulp build` запуск проекта на продуктив
 
 > `package.json` раздел `script` пишем скрипты запуска
 > > `npm run dev` запуск gulp watch настроеной в gulpfile.js 
+
+### Start project
+> `npm run dev` запуск в режиме разработчика ч/з npm package.json[scripts]
+> `npm run build` запуск в режиме продукта ч/з npm package.json[scripts]
+> `gulp build --dev --concat --sync --clean` запуск ч/з gulp gulpfile.js
+
