@@ -7,6 +7,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpIf = require('gulp-if');
 const browserSync = require('browser-sync').create();
 const gcmq = require('gulp-group-css-media-queries');
+const webp = require('gulp-webp');
+
 
 //console.log(process.argv); // список всех аргуметов команды gulp
 let isDev = process.argv.includes('--dev');
@@ -29,7 +31,7 @@ function html() {
     return gulp.src('./src/**/*.html')
         // silense
         .pipe(gulp.dest('./build/'))
-        .pipe(gulpIf(isDev,browserSync.stream()));
+        .pipe(gulpIf(isSync,browserSync.stream()));
 }
 
 function styles() {
@@ -39,32 +41,39 @@ function styles() {
         .pipe(gulpIf(isDev,sourcemaps.init()))
         .pipe(gulpIf(isConcat,concat('main.css')))
         .pipe(autoprefixer({}))
+        .pipe(gcmq())
         .pipe(gulpIf(isClean, cleanCSS({
             level: 2
         })))
         .pipe(gulpIf(isDev,sourcemaps.write()))
-        .pipe(gcmq())
         .pipe(gulp.dest('./build/css/'))
         .pipe(gulpIf(isSync,browserSync.stream()));
 }
 
 function images() {
     return gulp.src('./src/img/**/*')
-        // size down, webp
+        .pipe(gulp.dest('./build/img/'));
+}
+
+function imagesToWebp() {
+    return gulp.src('./src/img/**/*')
+        .pipe(webp())
         .pipe(gulp.dest('./build/img/'));
 }
 
 function watch() {
-    browserSync.init({
-        server: {
-            baseDir: "./build/"
-        }
-    });
+    if(isSync) {
+        browserSync.init({
+            server: {
+                baseDir: "./build/"
+            }
+        });
+    }
     gulp.watch('./src/**/*.html', html);
     gulp.watch('./src/css/**/*.css', styles);
 }
 
-let build = gulp.parallel(html, styles, images);
+let build = gulp.parallel(html, styles, images, imagesToWebp);
 let buildWithClean = gulp.series(clean, build);
 let dev = gulp.series(buildWithClean, watch);
 
