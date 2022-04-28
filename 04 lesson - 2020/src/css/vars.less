@@ -1,0 +1,19 @@
+@columns: 12;
+@offset: 30px;
+@offset_one_side: calc(@offset / 2);
+
+@color_green: #1d9d73;
+@color_white: #fff;
+@color_dark: #333;
+@color_middle: #888;
+
+@path_img: '../img/';
+
+.shadow(@color: #222) {
+  box-shadow: 5px 5px 10px @color;
+}
+
+.size(@n, @c: @columns, @off: @offset) {
+  @w: (100% / @c * @n);
+  width: calc(@w - @off);
+}
