@@ -42,8 +42,8 @@ function styles() {
         .pipe(gulpIf(isDev,sourcemaps.init()))
         //.pipe(gulpIf(isConcat,concat('main.less')))
         .pipe(less())
-        //.pipe(autoprefixer({}))
-        //.pipe(gcmq())
+        .pipe(autoprefixer({}))
+        .pipe(gcmq())
         .pipe(gulpIf(isClean, cleanCSS({
             level: 2
         })))

@@ -13,7 +13,27 @@
   box-shadow: 5px 5px 10px @color;
 }
 
+.shadow-ext {
+  box-shadow: 5px 5px 10px #222;
+}
+
+.row-ext() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: @offset_one_side;
+}
+
+.sg-row-ext {
+  .row-ext();
+}
+
 .size(@n, @c: @columns, @off: @offset) {
-  @w: (100% / @c * @n);
+  @w: (100% / @c * @n); /* обязательно писать в скобках, чтоб произошло вычесление заранее */
   width: calc(@w - @off);
+}
+
+.ie11(@content) {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content();
+  }
 }
