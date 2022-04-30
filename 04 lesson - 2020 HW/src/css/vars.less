@@ -1,0 +1,41 @@
+/* переменные */
+@col: 12;
+@offset: 30px;
+@offset_one_side: (@offset / 2);
+@path_img: '../img/';
+
+@c_accent: #5DD7D4;
+@c_white: #fff;
+@c_dark: #191D2B;
+@c_middle: #9B9B9B;
+
+@w_max: 1168px;
+
+/* функции */
+/*.row-fun();*/
+.row-fun() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  max-width: @w_max;
+}
+  /*&:extend(.row);*/
+  .row {
+    .row-fun();
+  }
+
+/*.size(@n, @c, @off);*/
+.size(@n, @c: @col, @off: @offset) {
+  @w: (100% / @c * @n); /* обязательно писать в скобках, чтоб произошло вычесление заранее */
+  width: calc(@w - @off);
+}
+
+/*&:extend(.wrap-container);*/
+.wrap-container {
+  width: 100%;
+  margin: 0px auto;
+}
+
+
+
+
