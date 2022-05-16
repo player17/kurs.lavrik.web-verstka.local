@@ -1,0 +1,33 @@
+.block-icon {
+  background: #1b936c url(/img/backgrownd1.webp) no-repeat top center;
+  .md-block({
+    background: #E0E1D9;
+  });
+}
+.block-icon__row {
+  .row-flex();
+  align-content: center;
+  height: 620px;
+  .md-block({
+    height: auto;
+  });
+}
+.block-icon__col {
+  .col();
+  .size(3);
+  .size-md(6);
+  .size-xs(12);
+  margin-top: @offset*4;
+  margin-bottom: @offset*4;
+}
+.block-icon__col-num {
+  text-align: center;
+  color: @color_green;
+  font-size: 36px;
+  padding: @offset*2 @offset*2 0px;
+}
+.block-icon__col-msg {
+  text-align: center;
+  padding: @offset @offset;
+  font-size: 1.2em;
+}

@@ -62,5 +62,3 @@
 ### Pre-proccess
 > `gulpfile.js` подключаем gulp-less в файле
 > > `npm i gulp-less -D`
-
-04-hw

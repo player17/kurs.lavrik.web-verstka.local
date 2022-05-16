@@ -1,0 +1,57 @@
+.humans{ 
+	background: @color_green;
+	padding: 10px 0;
+
+	h2{
+		color: @color_black;
+	}
+
+	.h2sub{
+		color: #fff;
+	}
+}
+
+.humansList{
+	.row-flex();
+	justify-content: center;
+}
+
+.humanCard{
+	.col();
+	.size(6);
+	.size-md(12);
+	.size-xs(24);
+	
+	max-width: 320px;
+	margin: @offset_one_side;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	&__image{
+		margin: 10px 0;
+		align-self: center;
+	}
+
+	&__title{
+		color: #222;
+		font-size: 24px;
+		margin: 10px;
+	}
+
+	&__job{
+		margin: auto 10px 10px;
+	}
+
+	&__follow{
+		background: #6cc372;
+		color: #fff;
+		font-size: 24px;
+		cursor: pointer;
+		border-radius: 5px;
+		padding: 5px;
+	}
+}

@@ -1,0 +1,65 @@
+/* 
+	Если есть желание потренироваться, 
+	можете поставить элементы данного раздела по сетке
+*/
+
+.pricing{  
+	.h2sub{
+		color: @color_red;
+	}
+
+	.items{
+		text-align: center;
+
+		.item{
+			font-size: 16px;
+			vertical-align: bottom;
+			padding: 0 5px;
+			text-align: center;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 30px;
+
+			.title{
+				background: #fff;
+				overflow: hidden;
+			}
+
+			ul{
+				li{
+					background: @color_grey;
+					padding: 15px 0;
+					border-bottom: 1px solid @color_black;
+				} 
+			}
+
+			.price{
+				background: @color_red;
+				color: #fff;
+				padding: 10px 15px;
+
+				.cur{
+					font-size: 1.5em;
+				}
+
+				.val{
+					font-size: 3em;
+				}
+
+				.per{
+					font-size: 1.2em;
+					margin-top: 10px;
+				}
+
+				a{
+					color: @color_black;
+					text-decoration: none;
+					background: #fff;
+					padding: 5px 20px;
+					border-radius: 5px;
+					margin-left: auto;
+				}
+			}
+		}
+	}
+}
