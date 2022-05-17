@@ -1,0 +1,97 @@
+@import "project.less";
+
+html{
+	font-size: 16px;
+}
+
+.reset();
+
+/*
+.debugGrid{
+	.debug(rgba(0, 0, 0, 0.3), 1px #ff0 solid);
+}
+*/
+
+.container{
+	.wrapper();
+}
+
+h2, .h2{
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.h2sub{
+	text-align: center;
+	font-size: 20px;
+	margin: 20px 0;
+}
+
+.sg-row{
+	.row-flex();
+}
+
+.sg-col{
+	.col();
+}
+
+.size-12{
+	.size(12);
+}
+
+.size-9{
+	.size(9);
+}
+
+.size-6{
+	.size(6);
+}
+
+.size-3{
+	.size(3);
+}
+
+.md-block({
+	.size-md-12{
+		.size(12);
+	}
+
+	.size-md-9{
+		.size(9);
+	}
+
+	.size-md-6{
+		.size(6);
+	}
+
+	.size-md-3{
+		.size(3);
+	}
+});
+
+.xs-block({
+	.size-xs-12{
+		.size(12);
+	}
+
+	.size-xs-9{
+		.size(9);
+	}
+
+	.size-xs-6{
+		.size(6);
+	}
+
+	.size-xs-3{
+		.size(3);
+	}
+});
+
+@import "sections/about.less";
+@import "sections/profit.less";
+@import "sections/humans.less";
+@import "sections/portfolio.less";
+@import "sections/pricing.less";
+@import "sections/some.less";
+@import "sections/footer.less";

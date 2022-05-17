@@ -21,6 +21,7 @@
   .col();
   .size(11/3);
   .size-md(9);
+  .size-xs(11);
   margin-bottom: @offset*4;
   background: #F7F8FA;
 }
@@ -55,6 +56,10 @@
 .block-price__col-list {
   padding: @offset*4 0px;
   text-align: center;
+  .xs-block({
+    text-align: left;
+    padding-left: @offset*2;
+  });
 }
 
 .block-price__col-list-ul {

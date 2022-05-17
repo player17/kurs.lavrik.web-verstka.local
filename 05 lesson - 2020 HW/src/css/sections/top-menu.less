@@ -8,6 +8,12 @@
     .logo__wrap {
       .col();
       width: 200px;
+      flex-grow: 0.5;
+      margin-left: auto;
+    }
+
+    .logo__wrap-picture {
+      max-width: 200px;
     }
 
     .menu__wrap {
@@ -25,7 +31,7 @@
   .row-flex();
   justify-content: flex-end;
   align-items: center;
-  .sm(justify-content, flex-start);
+  .sm(justify-content, center);
   //.sm-block(.col-ib());
 }
 .top-menu__row-menu-ul-li {

@@ -1,0 +1,41 @@
+.portfolio{ 
+	background: @color_grey;
+	padding: 10px 0 220px;
+
+	.md-block({
+		padding: 10px 0;
+	});
+
+	h2{
+		color: @color_black;
+	}
+
+	.h2sub{
+		color: @color_green;
+	}
+}
+
+.portfList{
+	.row-flex();
+	justify-content: space-between;
+	.md(justify-content, center);
+}
+
+.portfItem{
+	.col();
+	.size(2.64);
+	.size-md(3);
+	.size-sm(5);
+	.size-xs(10);
+	text-align: center;
+
+	&__image{
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	&__text{
+		color: @color_black;
+		font-size: 20px;
+	}
+}

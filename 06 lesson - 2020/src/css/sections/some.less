@@ -1,0 +1,26 @@
+.some{
+	background: @color_grey;
+	margin: @offset_one_side 0;
+}
+
+.someItems{
+	.row-flex();
+}
+
+.someItem{
+	.col-padding();
+
+	&-1{
+		.size(3);
+		background-color: @color_red;
+		padding-left: 0;
+		margin-left: @offset_one_side;
+	}
+
+	&-2{
+		.size(9);
+		background-color: @color_green;
+		padding-right: 0;
+		margin-right: @offset_one_side;
+	}
+}

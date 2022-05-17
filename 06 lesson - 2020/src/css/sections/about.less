@@ -1,0 +1,49 @@
+.about{ 
+	background: @color_grey;
+}
+
+.aboutBox{
+	.u-row-flex(0px);
+
+	&__image{
+		.u-col(0px);
+		.u-size(5, 12, 0px);
+		align-self: center;
+	}
+
+	&__intro{
+		.u-col(0px);
+		.u-size(7, 12, 0px);
+		padding: @offset_one_side;
+		background: #fff;
+	}
+
+	&__title{
+		font-size: 30px;
+	}
+
+	&__text{
+		margin: @offset_one_side 0;
+	}
+
+	.md-block({
+		&__image{
+			.u-size(6, 12, 0px);
+		}
+
+		&__intro{
+			.u-size(6, 12, 0px);
+		}
+	});
+
+	.sm-block({
+		&__image{
+			.u-size(1, 1, 0px);
+		}
+
+		&__intro{
+			.u-size(1, 1, 0px);
+		}
+	});
+}
+
